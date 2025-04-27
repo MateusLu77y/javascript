@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head> <!-- (Cabeça) Configurações do site! -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>/* Estilo do site! */
+    body{
+        background-color: rgb(151, 68, 151);
+        font-family: Arial, Helvetica, sans-serif;
+        color:white;
+    }
+    </style>
+</head>
+<body> <!-- (Corpo) Conteúdo do site, parte visível! -->
+    <h1>Olá Mundo!</h1>
+    <p>Já me livrei da maldição!</p>
+    <script>
+
+        let n1 = Number.parseFloat(window.prompt('Digite um número:')) 
+        // Convertendo a resposta do windows.prompt de string para number!
+
+        let n2 = Number(window.prompt('Digite outro número:')) 
+        //Pode ser usado tanto Number.parseFloat() ou Number()
+
+        const result = n1 + n2 // (number) + (number) = Number
+        window.alert(`A soma dos números ${n1} + ${n2} é ${result}`)
+        window.alert('A soma dos números'+ ' '+ n1.toString() + ' + ' + n2.toString() + ' é ' + String(result) )
+        // Outra forma, mais antiga!
+        // n.toString() = Converte o numero n, para string.
+        // String() = Forma mais nova, de converter os números dentro dos parênteses para string
+    </script>
+</body>
+</html>
