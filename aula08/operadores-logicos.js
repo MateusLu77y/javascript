@@ -37,6 +37,6 @@ let estado = 'SP'
 let salário = 1400
 let = sexo = 'F'
 
-console.log(`A idade está entre 15 é 17 anos? ${idade >= 15 && idade <=17}`) // A idade é menor ou igual a 15 e menor ou igual a 17?
+console.log(`A idade está entre 15 é 17 anos? ${idade >= 15 && idade <= 17}`) // A idade é menor ou igual a 15 e menor ou igual a 17?
 console.log(`O estado que você mora é RJ ou SP? ${estado == 'RJ' || estado == 'SP'}`) // o estado é igual a RJ, ou SP?
 console.log(`Seu salário é 1500 ou acima é você é uma mulher? ${salário >= 1500 && sexo != 'M'}`) // O salário é maior ou igual a 1500 é o sexo é diferente de M?
