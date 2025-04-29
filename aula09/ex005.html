@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        * {
+            margin 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: rgb(38, 170, 214);
+            color: whitesmoke;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+        }
+
+        h1 {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado!</p>
+    <p name="chico">Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique aqui!</div>
+    <div class="msg2">Clique aqui tambem!</div>
+    <div id="msg3">...</div>
+
+    <script>
+        let p1 = window.document.getElementsByTagName('p')[0] // Selecionei o primeiro páragrafo!
+        p1.style.background = 'lightblue' // Mudei o background do páragrafo para azul claro!
+        p1.style.color = 'whitesmoke' // Mudei a cor do texto do páragrafo para white!
+        p1.innerText = 'Seleção por <Tag>'
+        p1.style.fontWeight = 'bold'
+
+        let d1 = window.document.getElementsByName("chico")[0]
+        d1.innerText = 'Seleção NAME!'
+        d1.style.fontWeight = 'bold'
+        d1.style.background = 'Black'
+
+        let p2 = window.document.getElementById('msg')
+        p2.innerText = 'Seleção ID!'
+        p2.style.background = 'red'
+        p2.style.fontWeight = 'bold'
+
+        let d2 = window.document.getElementsByClassName('msg2')[0]
+        d2.style.background = 'Green'
+        d2.innerText = 'Seleção por Class'
+        d2.style.fontWeight = 'bold'
+
+        let d3 = window.document.querySelector('div#msg3');
+        d3.innerText = 'Seleção por seletor';
+        d3.style.background = 'black';
+        /*Como selecionar Elementos:
+
+            Por Marca (tag):
+            window.documment.getElementsByTagName('nome da tag')[número que indica a posição dela no código se existir mais de uma.
+
+                Exemplo:
+                
+            window.documment.getElementsByTagName('p')[0]  --) Selecionei a tag <p>[0] a primeira que aparecer
+
+            Por Id (identificador):
+
+            */
+    </script>
+</body>
+
+</html>
