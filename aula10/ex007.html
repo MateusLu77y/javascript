@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Somando Números:</h1>
+    <!-- Criando as caixas de entrada de dados (input)-->
+    <input type="text" name="texto1" id="itexto1" placeholder="Insira um número">
+    <input type="text" name="texto2" id="itexto2" placeholder="Insira outro número">
+    <!-- Criando botão de somar -->
+    <!-- Com o onclick, com a funtion somar() -->
+    <input type="button" value="Somar" onclick="somar()">
+    <!-- Criando o resultado -->
+    <div id="resultado">Resultado:</div>
+
+    <script>
+        //Função somar vinculada ao botão Somar
+        function somar() {
+            //Criei uma variável para guardar os números da caixa de texo, (String) Selecionando as duas caixas de texto!
+            let nm1 = window.document.getElementById('itexto1')
+            let nm2 = window.document.getElementById('itexto2')
+            let soma = window.document.getElementById('resultado')
+
+            //Converter para outra variável transformando em tipo (Number)
+            let n1 = Number(nm1.value)
+            let n2 = Number(nm2.value)
+            //Realizando o cálculo:
+
+            window.document.write(soma.innerText='Clicou!')
+        }
+    </script>
+</body>
+
+</html>

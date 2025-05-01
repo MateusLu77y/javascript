@@ -15,21 +15,29 @@
             height: 200px;
             font-size: 20pt;
             font-family: Arial, Helvetica, sans-serif;
-            bord
         }
     </style>
 </head>
 
 <body>
-    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()" onmousedown="segurou()">Interaja...
+    <div id="area" onmousedown="segurou()">Interaja...
     </div>
-
     <script>
         let a = window.document.getElementById('area')
+        //Dentro do HTML: onclick="clicar()"
+        //Forma sem colocar o onclick dentro da div no HTML: variavel.addEventListener('click', clicar)
+
+        //variavel.addEventListener('Evento', NomedaFunção)
+
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
 
         function clicar() {
             a.innerText = 'Clicou!'
             a.style.backgroundColor = 'red'
+            a.style.borderRadius = '10px'
         }
 
         function entrar() {
@@ -39,10 +47,13 @@
         function sair() {
             a.innerText = 'Saiu!'
             a.style.backgroundColor = 'green'
+            a.style.borderRadius = '0px'
         }
 
         function segurou() {
             a.innerText = 'Segurou!'
+            a.style.backgroundColor = 'orange'
+            a.style.borderradius = '10px'
         }
     </script>
 </body>
