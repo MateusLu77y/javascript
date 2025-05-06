@@ -15,8 +15,8 @@
 <body>
     <h1>Somando Números:</h1>
     <!-- Criando as caixas de entrada de dados (input)-->
-    <input type="text" name="texto1" id="itexto1" placeholder="Insira um número">
-    <input type="text" name="texto2" id="itexto2" placeholder="Insira outro número">
+    <input type="number" id="in1" placeholder="Insira um número">
+    <input type="number" id="in2" placeholder="Insira outro número">
     <!-- Criando botão de somar -->
     <!-- Com o onclick, com a funtion somar() -->
     <input type="button" value="Somar" onclick="somar()">
@@ -27,16 +27,20 @@
         //Função somar vinculada ao botão Somar
         function somar() {
             //Criei uma variável para guardar os números da caixa de texo, (String) Selecionando as duas caixas de texto!
-            let nm1 = window.document.getElementById('itexto1')
-            let nm2 = window.document.getElementById('itexto2')
-            let soma = window.document.getElementById('resultado')
+            let tn1 = document.getElementById('in1')
+            let tn2 = document.getElementById('in2').value // .value, pode ser colocado aqui ou na conversão!
 
-            //Converter para outra variável transformando em tipo (Number)
-            let n1 = Number(nm1.value)
-            let n2 = Number(nm2.value)
+
+
+            //Converter para outra variável transformando em tipo (Number), não se esqueça do .value no final!
+            let n1 = Number(tn1.value)
+            let n2 = Number(tn2)
+            console.log(n2)
+
             //Realizando o cálculo:
 
-            window.document.write(soma.innerText='Clicou!')
+            let calculo = n1 + n2
+            document.getElementById('resultado').innerText = 'O resultado é ' + calculo
         }
     </script>
 </body>
