@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resisdencia</title>
+</head>
+
+<body>
+    <h1>De onde você é?</h1>
+    <label for="ipais">Onde você mora? <input type="text" id="ipais"></label>
+    <input type="button" onclick="testar()" value="Enviar">
+    <p id="text"></p>
+
+    <script>
+        function testar() {
+            let pais = window.document.getElementById('ipais').value
+            let text = window.document.getElementById('text')
+            text.innerHTML = `<p>Você mora no(a): <strong>${pais}</strong></p>`
+
+            if (pais == 'Brasil' || pais == 'brasil') {
+                text.innerHTML += `<p>Você é <strong>Brasileiro!</strong></p>`
+            }
+            else {
+                text.innerHTML += `<p>Você é <strong>Estrangeiro!</strong></p>`
+            }
+        }
+    </script>
+</body>
+
+</html>

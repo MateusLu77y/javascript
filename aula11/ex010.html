@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br>
+<head>
+    <meta charset=" UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistema de multas</title>
+</head>
+
+<body>
+    <h1>Sistema de multas</h1>
+    <label for="ivel">Digite a velocidade: <input type="number" id="ivel"> km/h</label>
+    <input type="button" onclick="teste()" value="Testar">
+    <div id="saida"></div>
+
+    <script>
+
+        function teste() {
+            let vel = Number(document.getElementById
+                ('ivel').value)
+            let saida = window.document.querySelector('div#saida')
+            saida.innerHTML = `<p>Sua velocidade atual é de <strong>${vel} km/h</strong></p>`
+
+            saida.innerHTML += `<p>Dirija com segurança!</p>`
+            if (vel > 60) {
+
+                saida.innerHTML += 'Você ultrapassou a velocidade máxima, <strong>MULTADO!</strong>'
+            }
+        }
+
+    </script>
+</body>
+
+</html>
