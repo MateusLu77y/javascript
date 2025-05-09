@@ -7,9 +7,10 @@ function validar() {
     let msg = document.getElementById('msg') //Mensagem da idade
     let img = document.getElementById('img') //Imagem da pessoa
 
-    //Válidando o anoNas:
+    //Válidando o ano de nascimento:
     if (anoNas.value.length == 0 || Number(anoNas.value) > anoAtual) {
         window.alert("[ERRO] - Ano inválido, digite outro ano!")
+
     } else {
         let sexo = document.getElementsByName('gsex')
         let idade = anoAtual - anoNas.value
@@ -32,8 +33,6 @@ function validar() {
                 img.src = 'imagens/idoso-m.png'
             //Idoso
 
-
-
         } else if (sexo[1].checked) {
             genero = 'Mulher'
 
@@ -55,7 +54,4 @@ function validar() {
         msg.style.textAlign = 'center'
         msg.innerHTML = (`Detectamos ${genero} com ${idade} anos`)
     }
-
-
-    console.log('Funcionando!')
 }
