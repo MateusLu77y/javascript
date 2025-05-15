@@ -1,22 +1,47 @@
 //Contador
 function contar() {
+
     //Captura os valores dos inputs!
-    let inicio = Number(document.getElementById('inicio').value)
-    let fim = Number(document.getElementById('fim').value)
-    let passos = Number(document.getElementById('passos').value)
+    let inicioStr = document.getElementById('inicio').value
+    let fimStr = document.getElementById('fim').value
+    let passosStr = document.getElementById('passos').value
     let msg = document.getElementById('msg')
 
+    //Reseta o conteúdo:
+    msg.innerHTML = 'Contando:'
+
     // Válidações:
-
-    if (passos <= 0) {
-        passos = 1
-        alert('Passo inválido!')
-
-    } else if (inicio > fim) {
-        alert('O inicio não pode ser maior que o fim!')
+    if (inicioStr === '') {
+        window.alert('Por favor preencha o inicio!')
+        return //para a execução
     }
-    for (i = inicio; i <= fim; i += passos) {
-        msg.innerText=`o valor é: ${i}`
+
+    if (fimStr === '') {
+        window.alert('Por favor preencha o fim!')
+        return //para a execução
     }
+
+    if (passosStr === '') {
+        window.alert('Por favor preencha o passos!')
+        return //para a execução
+    }
+
+    //Convertendo para número:
+    let inicio = Number(inicioStr)
+    let passos = Number(passosStr)
+    let fim = Number(fimStr)
+
+    //Processamento:
+    if (inicio < fim) {
+        //Crescente:
+        for (let i = inicio; i <= fim; i += passos) {
+            msg.innerHTML += `👉🏼${i} `
+        }
+    } else {
+        //Decrescente:
+        for (let i = inicio; i >= fim; i -= passos)
+            msg.innerHTML += `👉🏼${i}`
+    }
+
+    msg.innerHTML += `🏁`
 }
-
