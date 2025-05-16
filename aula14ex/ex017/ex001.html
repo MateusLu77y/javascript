@@ -10,11 +10,30 @@
 
 <body>
     <header>
-        <h1>Título</h1>
+        <h1>Tabuada</h1>
     </header>
     <section>
-        <div>Testando...</div>
-        <div>Testando2...</div>
+        <div>
+            <p>Número:
+                <input id="numero" type="number">
+                <input id="gerar" onclick="gerarTabuada()" type="button" value="Gerar Tabuada">
+            </p>
+        </div>
+        <div>
+            <select name="tabuada" multiple size="9" id="tabuada">
+                <option class="opcao" value="">Digite um número acima</option>
+                <option class="opcao" value=""></option>
+                <option class="opcao" value=""></option>
+                <option class="opcao" value=""></option>
+                <option class="opcao" value=""></option>
+                <option class="opcao" value=""></option>
+                <option class="opcao" value=""></option>
+                <option class="opcao" value=""></option>
+                <option class="opcao" value=""></option>
+
+            </select>
+
+        </div>
     </section>
     <footer>
         <p>&copy; TeusCode</p>
