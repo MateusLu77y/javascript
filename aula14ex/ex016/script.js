@@ -8,7 +8,7 @@ function contar() {
     let msg = document.getElementById('msg')
 
     //Reseta o conteúdo:
-    msg.innerHTML = 'Contando:'
+    msg.innerHTML = `Contando: <br>`
 
     // Válidações:
     if (inicioStr === '') {
@@ -31,16 +31,20 @@ function contar() {
     let passos = Number(passosStr)
     let fim = Number(fimStr)
 
+    if (passos === 0) {
+        alert('Passo Inválido, considerando PASSO 1')
+        passos = 1
+    }
     //Processamento:
     if (inicio < fim) {
         //Crescente:
         for (let i = inicio; i <= fim; i += passos) {
-            msg.innerHTML += `👉🏼${i} `
+            msg.innerHTML += `${i} 👉🏼 `
         }
     } else {
         //Decrescente:
         for (let i = inicio; i >= fim; i -= passos)
-            msg.innerHTML += `👉🏼${i}`
+            msg.innerHTML += ` ${i} 👉🏼 `
     }
 
     msg.innerHTML += `🏁`
