@@ -1,11 +1,18 @@
 
 function gerarTabuada() {
+    //Seleciona:
     let num = Number(document.getElementById('numero').value)
-    let c = 0
-    let opcao = document.getElementsByClassName('opcao')
-    opcao.innerHTML = ''
+    let opcoes = document.getElementsByClassName('opcao')
+    opcoes.innerHTML = ''
 
-    for (let i = 1; i <= 9; i++) {
-        opcao.innerHTML += `${num} x ${i} = ${num * i}<br>`
+    if (num === 0 || num == '') {
+        alert('Insira um número!')
+        return
+    } else {
+        //Processamento:
+        //O atributo .lenght, pega a quantidade de elementos dentro de uma lista, 
+        for (let i = 0; i < opcoes.length; i++) {
+            opcoes[i].innerHTML = `${num} x ${i + 1} = ${num * (i + 1)}`
+        }
     }
 }
