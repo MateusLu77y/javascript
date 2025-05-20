@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de nomes</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-color: #1663b1;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+
+        body h1 {
+            text-align: center;
+        }
+
+        div.principal {
+            background-color: white;
+            margin: auto;
+            width: 50%;
+            border-radius: 10px;
+            box-shadow: 7px 7px 1px #0c355e;
+            color: black;
+            padding: 10px;
+        }
+
+        div {
+            text-align: center;
+        }
+
+        div h1 {
+            color: #00428c;
+        }
+
+        p {
+            background-color: #1663b13a;
+            border-radius: 10px;
+            padding: 10px
+        }
+
+        input#button {
+            width: 200px;
+            height: 40px;
+            border: none;
+            font-weight: bold;
+            background-color: #00418c6b;
+            border-radius: 5px;
+        }
+
+        input#button:hover {
+            background-color: #459cffb7;
+            color: white;
+            border: #0c355e;
+        }
+
+        footer {
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Cadastro de nomes</h1>
+    <div class="principal">
+        <h1>Exercicio de nomes:</h1>
+        <div><input id="button" type="button" value="Iniciar" onclick="iniciar()"></div>
+        <section id="conteudo">
+
+        </section>
+    </div>
+    <footer>
+        <p>&copy; TeusCode</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
