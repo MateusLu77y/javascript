@@ -28,3 +28,7 @@ footer {
     color: white;
     text-align: center;
 }
+
+input#numero {
+    width: 120px;
+}

@@ -4,11 +4,12 @@ let listNum = []
 function adicionar() {
     //Selecionando:
     let numStr = document.getElementById('numero').value
+    document.getElementById('numero').value = ''
     let num = Number(numStr)
     let tab = document.getElementById('tabela')
 
     //Validação:
-    if (num == '') {
+    if (num == 0) {
         alert('Digite um número!')
         return
     } else if (num < 1 || num > 100) {
@@ -35,13 +36,30 @@ function adicionar() {
 function dados() {
     //Criação de Elemento:
     let res = document.getElementById('resd')
+    res.innerHTML = ''
     let result = document.createElement('p')
 
-    result.innerHTML += `Ao todo temos ${listNum.length}  números cadastrados. <br><br>`
-    result.innerHTML += `O maior valor informado foi.<br><br>`
-    result.innerHTML += `O menor valor informado foi .<br><br>`
-    result.innerHTML += `A média dos valores digítados é .<br><br>`
-    res.appendChild(result)
+    //Validação:
+    if (listNum.length == 0) {
+        alert('Porfavor escreva os valores antes de finalizar!')
+        return
+    }
 
+    let qntNum = listNum.length
+    let maiorNum = Math.max(...listNum)
+    let menorNum = Math.min(...listNum)
+    let soma = listNum.reduce(function (accumulator, value) {
+        return accumulator + value
+    })
+    let media = soma / qntNum
+
+    //Mensagem:
+    result.innerHTML += `Ao todo temos <strong>${qntNum}</strong>  números cadastrados. <br><br>`
+    result.innerHTML += `O maior valor informado foi <strong>${maiorNum}</strong>.<br><br>`
+    result.innerHTML += `O menor valor informado foi <strong>${menorNum}</strong> .<br><br>`
+    result.innerHTML += `Somando todos os valores, temos <strong>${soma}</strong> .<br><br>`
+    result.innerHTML += `A média dos valores digitados é <strong>${media}</strong>.<br><br>`
+    res.appendChild(result)
 }
+
 
