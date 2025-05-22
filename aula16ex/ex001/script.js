@@ -2,6 +2,10 @@
 let listNum = []
 
 function adicionar() {
+    //Reiniciando:
+    let res = document.getElementById('resd')
+    res.innerHTML = ''
+
     //Selecionando:
     let numStr = document.getElementById('numero').value
     document.getElementById('numero').value = ''
@@ -36,7 +40,7 @@ function adicionar() {
 function dados() {
     //Criação de Elemento:
     let res = document.getElementById('resd')
-    res.innerHTML = ''
+    res.innerHTML = '' //Reiniciando.
     let result = document.createElement('p')
 
     //Validação:
@@ -58,7 +62,7 @@ function dados() {
     result.innerHTML += `O maior valor informado foi <strong>${maiorNum}</strong>.<br><br>`
     result.innerHTML += `O menor valor informado foi <strong>${menorNum}</strong> .<br><br>`
     result.innerHTML += `Somando todos os valores, temos <strong>${soma}</strong> .<br><br>`
-    result.innerHTML += `A média dos valores digitados é <strong>${media}</strong>.<br><br>`
+    result.innerHTML += `A média dos valores digtados é <strong>${media}</strong>.<br><br>`
     res.appendChild(result)
 }
 
