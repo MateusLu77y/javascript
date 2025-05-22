@@ -9,6 +9,7 @@ function adicionar() {
     //Selecionando:
     let numStr = document.getElementById('numero').value
     document.getElementById('numero').value = ''
+    document.getElementById('numero').focus()
     let num = Number(numStr)
     let tab = document.getElementById('tabela')
 
