@@ -29,6 +29,10 @@ footer {
     text-align: center;
 }
 
+select {
+    width: 150px;
+}
+
 input#numero {
     width: 120px;
 }
